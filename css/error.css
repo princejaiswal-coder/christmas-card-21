@@ -1,0 +1,28 @@
+@charset "windows-1251";
+/* Fallback styles for IE8 and older browsers, see "browsercheck.js" file */
+
+/* Html and body styles */
+html, body {
+	background-color: #fff;
+}
+
+/* Styles for alert image */
+#alert {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -960px;
+	margin-top: -540px;
+}
+
+/* Styles for alert text */
+#alert_message {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-family: 'miso-regular';
+	font-size: 40px;
+	text-align: center;
+	color: #fff;
+	margin: 130px 0 0 -250px;
+}

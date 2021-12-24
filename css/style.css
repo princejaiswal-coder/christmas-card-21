@@ -1,0 +1,151 @@
+@charset "windows-1251";
+
+/* POCKET XMAS CARD by Kontramax */
+
+/*
+----------------------------------------------------------------------------------
+
+CSS Table of content:
+
+1. Connect custom fonts: @font-face
+
+2. Setup fade-in animation when start: @keyframes
+
+3. Main styles:
+
+	3.1 Html styles: html
+
+	3.2 Body styles: body
+
+	3.3 Canvas styles: #canvas
+
+	3.4 Canvas fade-in animation styles: #canvas.animation
+
+	3.4 Background image styles: #background-image
+
+	3.5 Pattern image styles: #pattern-image
+
+4. Preloader styles: 
+
+	4.1 Preloader styles: #preloader
+
+	4.2 Preloader image styles: #preloader img
+
+	4.3 JS-generated preloader text styles: #percents
+
+----------------------------------------------------------------------------------
+*/
+
+/* Connect custom fonts */
+@font-face { 
+	font-family: 'miso-regular';
+		src:	url('../fonts/miso-regular-webfont.woff2') format('woff2'),
+				url('../fonts/miso-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Fade-in animation styles */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+/* Html Styles */
+html {
+	background: #204964;
+	height: 100%;
+}
+
+/* Body styles */
+body {
+	color: #aaa;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	background: linear-gradient(0deg, #576B7D 0%, #005285 100%);
+	animation: 1s ease-in 0s 1 fadeIn;
+	/*-webkit-overflow-scrolling: auto;*/
+}
+
+/* Canvas styles */
+#canvas {
+	display: none;
+	height: 100vh; 
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+	z-index:2;
+	/*background-color:rgba(255, 0, 0, 0.3);*/
+}
+
+/* Canvas fade-in animation styles */
+#canvas.animation { 
+	animation: 0.5s ease-in 0s 1 fadeIn;
+}
+
+/* Background image styles*/
+#background-image {
+  background-image: url('../images/shadow.png');
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+/* Pattern image styles */
+#pattern-image {
+  background-image: url('../images/pattern.png');
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.05;
+  position: fixed;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Preloader styles */
+#preloader {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0.3;
+	display: none;
+	margin-top: 0px;
+	margin-left:-20px;
+	vertical-align: middle;
+
+}
+
+/* Preloader image styles */
+#preloader img {
+	vertical-align: middle;
+	max-height: 100%
+}
+
+/* JS-generated preloader text styles */
+#percents {
+	font-family: 'miso-regular';
+	font-size: 24px;
+	color: #FFFFFF;
+	top: -4px;
+	position: absolute;
+}
+
